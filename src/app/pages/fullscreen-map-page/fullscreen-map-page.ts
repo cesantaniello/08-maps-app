@@ -69,6 +69,9 @@ export class FullscreenMapPage implements AfterViewInit {
     this.coordinates.set(center);
   })
 
+  map.addControl(new mapboxgl.FullscreenControl());
+  map.addControl(new mapboxgl.NavigationControl());
+
   this.map.set(map);
   }
 }
