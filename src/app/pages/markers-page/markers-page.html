@@ -6,7 +6,8 @@
   <div class="flex flex-col gap-2">
     @for (marker of markers(); track marker.id){
       <div class="form-control"
-          click="flyToMarker(marker.mapboxMarker.getLngLat())">
+          click="flyToMarker(marker.mapboxMarker.getLngLat())"
+          (dblclick)="deleteMarker(marker)">
         <label class="label cursor-pointer">
           <span class="label-text text-black text-xs">
             {{ marker.mapboxMarker.getLngLat() | json}}
